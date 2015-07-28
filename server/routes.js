@@ -7,11 +7,14 @@
 var errors = require('./components/errors');
 var passport = require("passport");
 require('./config/tiendanubeStrategy');
+require('./config/shopifyStrategy');
 
 module.exports = function(app) {
   // Insert routes below
   app.get('/auth/tiendanube', passport.authenticate('tiendanube'));
   app.get('/auth/tiendanube/return', passport.authenticate('tiendanube',{successRedirect: "/", failureRedirect: "/login"}));
+  app.get('/auth/shopify', passport.authenticate('shopify', {scope: ['read_products','write_products']}));
+  app.get('/auth/shopify/return', passport.authenticate('shopify',{successRedirect: "/", failureRedirect: "/login"}));
 
   app.use('/api/things', require('./api/thing'));
 

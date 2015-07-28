@@ -5,6 +5,9 @@ angular.module 'tiendanubeApp'
   $scope.menu = [
     title: 'Login with TiendaNube'
     link: '/auth/tiendanube'
+  ,
+    title: 'Login with Shopify'
+    link: '/auth/shopify'
   ]
   $scope.isCollapsed = true
 
