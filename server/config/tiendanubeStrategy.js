@@ -5,7 +5,7 @@ var TiendaNubeStrategy = require("passport-tiendanube").Strategy;
 
 passport.use(new TiendaNubeStrategy({
   clientID: 181,
-  clientSecret: "1fQ78gGdo9ZakMu2PJ8mOx4ShExam22kzcthI6SJ5YOdDIcj",
+  clientSecret: "NO_HARDCODED_SECRET_HERE",
   userAgent: 'Producteca (andres@parsimotion.com)'
 }, function(accessToken, refreshToken, profile, done) {
   console.log(profile);
