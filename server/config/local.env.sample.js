@@ -7,7 +7,7 @@
 
 module.exports = {
   DOMAIN:           'http://localhost:9000',
-  SESSION_SECRET:   'tiendanube-secret',
+  SESSION_SECRET:   'NO_HARDCODED_SECRET_HERE',
 
   // Control debug level for modules using visionmedia/debug
   DEBUG: ''
